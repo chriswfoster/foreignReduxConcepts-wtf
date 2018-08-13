@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import store from '../store'
+import something from '../Something/something.js'
 import {connect} from 'react-redux';
 
 class Other extends Component {
@@ -9,10 +10,13 @@ class Other extends Component {
     }
 
     render() {
+        const getStore = store.getState;
+        console.log(getStore());
         return (
             <div>
                 <p>The Other Page!</p>
                 <button onClick={()=> this.props.anotherFunctionBelow()}>Other button</button>
+                <button onClick={()=> something()}> Something</button>
             </div>
         );
     }
