@@ -22,7 +22,7 @@ const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
     anotherFunctionBelow() {
-        dispatch({ action: "SOMETHING_ELSE", type: "hello" })
+        dispatch({ type: "SOMETHING_ELSE", payload: "hello" })
     }
 })
 

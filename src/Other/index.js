@@ -2,10 +2,10 @@ const initialState = {}
 
 export default(state = initialState, action) => {
     const {payload, type} = action
-    const state2 = state;
+    let state2 = state;
     switch(type){
         case "SOMETHING_ELSE":
-            state= {...state2, payload}
+            state2={...state2, ...payload}
             break;
             default:
             break;
